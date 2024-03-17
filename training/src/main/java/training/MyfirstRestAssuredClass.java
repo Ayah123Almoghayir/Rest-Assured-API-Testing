@@ -15,7 +15,7 @@ import org.junit.Test;
 public class MyfirstRestAssuredClass{
 @Test
 public  void getResponseBody(){
-	/*Response response=RestAssured.get("http://demo.guru99.com/V4/sinkministatement.php?CUSTOMER_ID=68195&PASSWORD=1234!&Account_No=1");
+	Response response=RestAssured.get("http://demo.guru99.com/V4/sinkministatement.php?CUSTOMER_ID=68195&PASSWORD=1234!&Account_No=1");
 	   System.out.println("The Status Code ="+response.getStatusCode());
 	   System.out.println("The Time ="+response.getTime());
 	   System.out.println(" all the response is fetched, log response, headers, essentially everything that the request returns");
@@ -42,8 +42,8 @@ public  void getResponseBody(){
 	 
 	 System.out.println("The content type of response "+
 	           get("http://demo.guru99.com/V4/sinkministatement.php").then().extract()
-	              .contentType());*/
-		List<String> amounts = when().get("http://demo.guru99.com/V4/sinkministatement.php").then().extract().path("result.statements.AMOUNT") ;
+	              .contentType());
+		ArrayList<String> amounts = when().get("https://demo.guru99.com/V4/sinkministatement.php?CUSTOMER_ID=68195&PASSWORD=1234!&Account_No=1").then().extract().path("result.statements.AMOUNT") ;
 		int sumOfAll=0;
 		for(String a:amounts){
 
