@@ -43,8 +43,6 @@ public  void getResponseBody(){
 	 System.out.println("The content type of response "+
 	           get("http://demo.guru99.com/V4/sinkministatement.php").then().extract()
 	              .contentType());*/
-	 
-
 		List<String> amounts = when().get("http://demo.guru99.com/V4/sinkministatement.php").then().extract().path("result.statements.AMOUNT") ;
 		int sumOfAll=0;
 		for(String a:amounts){
