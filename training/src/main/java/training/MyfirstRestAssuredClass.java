@@ -52,5 +52,6 @@ public  void getResponseBody(){
 		}
 		System.out.println("The total amount is "+sumOfAll);
 	}
+}
 
 }
